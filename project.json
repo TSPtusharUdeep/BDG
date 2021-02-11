@@ -3,6 +3,7 @@
   "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Excel.Activities": "[2.10.0-preview]",
     "UiPath.System.Activities": "[20.10.3]",
     "UiPath.Testing.Activities": "[1.2.4]",
     "UiPath.UIAutomation.Activities": "[20.10.8]"
@@ -40,6 +41,11 @@
         "editingStatus": "InProgress",
         "testCaseId": "5f6ff1d3-1d3e-4b1f-bcf8-6e37e72352dd",
         "fileName": "TestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "4d006def-ce68-4f83-bff7-9c7930ed6797",
+        "fileName": "testCases\\process_02_processOrderEndToEnd.xaml"
       }
     ],
     "modernBehavior": false
