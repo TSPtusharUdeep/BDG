@@ -1,0 +1,249 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="VA41_CreateQuantityContractHeaderData" this:VA41_CreateQuantityContractHeaderData.in_orchestratorFolderPath="Default" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_orchestratorFolderPath" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>824,1694.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>VA41_CreateQuantityContractHeaderData_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="24">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="VA41_CreateQuantityContractHeaderData" sap:VirtualizedContainerService.HintSize="484.8,1529.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="valid_From_date" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_validFromDate" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="443.2,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[valid_From_date]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Create'" sap:VirtualizedContainerService.HintSize="443.2,347.2" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="9c7b799eeb511f2a52c4899d81b7b57f" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Overview' /&gt;">
+      <ui:WindowScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button Display'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="09b44835-2bd9-42d2-848b-311d4e1d2517" InformativeScreenshot="71a5170fb28d6cd99e85e376cfbbfafc" Selector="&lt;sap id='usr/subSUBSCREEN_HEADER:SAPMV45A:4021/btnBT_HEAD' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:WindowScope.Body>
+    </ui:WindowScope>
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Create'" sap:VirtualizedContainerService.HintSize="443.2,870.4" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="59ed347c209126995dec945a11ca72e4" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Header Data' /&gt;">
+      <ui:WindowScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,723.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Tab  Order Data'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e155ac4a-e2a2-456f-a5e4-d0fce6bcfb38" InformativeScreenshot="693cab395eb669cf966b152d43b64e72" Selector="&lt;sap id='usr/tabsTAXI_TABSTRIP_HEAD/tabpT\09' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField Last'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[valid_From_date]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="697f98c5-e6b5-4fcd-8661-4a81f4138ff8" InformativeScreenshot="51381886002454e9246356dba6f83cb4" Selector="&lt;sap id='usr/tabsTAXI_TABSTRIP_HEAD/tabpT\09/ssubSUBSCREEN_BODY:SAPMV45A:4351/ctxtVBAK-MAHDT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ucas:ClickToolbarButton ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="1000" DisplayName="Click Toolbar Button 'Menubar  mbar'" sap:VirtualizedContainerService.HintSize="333.6,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="Edit/Incompletion Log">
+              <ucas:ClickToolbarButton.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String>Sales Document/Create</x:String>
+                  <x:String>Sales Document/Change</x:String>
+                  <x:String>Sales Document/Display</x:String>
+                  <x:String>Sales Document/Create with Reference</x:String>
+                  <x:String>Sales Document/Create with Reference to Serial Number</x:String>
+                  <x:String>Sales Document/Save</x:String>
+                  <x:String>Sales Document/Create Subsequent Order</x:String>
+                  <x:String>Sales Document/Deliver</x:String>
+                  <x:String>Sales Document/Billing</x:String>
+                  <x:String>Sales Document/Delete</x:String>
+                  <x:String>Sales Document/Exit</x:String>
+                  <x:String>Edit/Propose Items</x:String>
+                  <x:String>Edit/Delete Unchanged Item</x:String>
+                  <x:String>Edit/Batch Determtn</x:String>
+                  <x:String>Edit/Overall Network Scheduling</x:String>
+                  <x:String>Edit/Item</x:String>
+                  <x:String>Edit/Header</x:String>
+                  <x:String>Edit/Check Document Availability</x:String>
+                  <x:String>Edit/New Pricing Document</x:String>
+                  <x:String>Edit/Incompletion Log</x:String>
+                  <x:String>Edit/Cancel</x:String>
+                  <x:String>Goto/Overview</x:String>
+                  <x:String>Goto/Header</x:String>
+                  <x:String>Goto/Item</x:String>
+                  <x:String>Goto/Back</x:String>
+                  <x:String>Extras/Packing Proposal</x:String>
+                  <x:String>Extras/Configuration</x:String>
+                  <x:String>Extras/Costing</x:String>
+                  <x:String>Extras/Technical Objects</x:String>
+                  <x:String>Extras/Documents</x:String>
+                  <x:String>Extras/Display Batch Determ.</x:String>
+                  <x:String>Extras/Price Agreements</x:String>
+                  <x:String>Extras/Assign Credit Memo</x:String>
+                  <x:String>Environment/Display Originals</x:String>
+                  <x:String>Environment/Changes</x:String>
+                  <x:String>Environment/Display Document Flow</x:String>
+                  <x:String>Environment/Status Overview</x:String>
+                  <x:String>Environment/External Credit Insurance</x:String>
+                  <x:String>Environment/Display Material</x:String>
+                  <x:String>Environment/Availability</x:String>
+                  <x:String>Environment/Substance Reports</x:String>
+                  <x:String>Environment/Order Report</x:String>
+                  <x:String>Environment/Cost Report</x:String>
+                  <x:String>System/New GUI Window</x:String>
+                  <x:String>System/Close GUI Window</x:String>
+                  <x:String>System/Services for Object</x:String>
+                  <x:String>System/Own Spool Requests</x:String>
+                  <x:String>System/Own Jobs</x:String>
+                  <x:String>System/Short Message</x:String>
+                  <x:String>System/Status...</x:String>
+                </scg:List>
+              </ucas:ClickToolbarButton.Items>
+              <ucas:ClickToolbarButton.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="85c80eac-465e-40e7-9a3b-b4e9311f3ce3" InformativeScreenshot="eada766767bc741259b63e390d340388" Selector="&lt;sap id='mbar' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ucas:ClickToolbarButton.Target>
+            </ucas:ClickToolbarButton>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  Save (Ctrl+S)'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="349bc7cb-db27-43ed-a67a-3b18dcc1834b" InformativeScreenshot="70f5de8ccf143e1fee2ce298d39a3cf0" Selector="&lt;sap id='tbar[0]/btn[11]' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:WindowScope.Body>
+    </ui:WindowScope>
+  </Sequence>
+</Activity>

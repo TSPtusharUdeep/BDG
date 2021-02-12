@@ -1,0 +1,215 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="copyDataToAssets" this:copyDataToAssets.in_orchestratorFolderPath="Default" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_orchestratorFolderPath" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>824,3425.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>copyDataToAssets_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="copyDataToAssets" sap:VirtualizedContainerService.HintSize="552,3260.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:GenericValue" Name="distributionChannel" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="documentType" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="division" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="salesOrgniazation" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="plant" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="soldToParty" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="shipToParty" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="validFromDate" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="materialNumber" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="quantity" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="conditionType" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="amount" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="documentType2" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="shippingPoint" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="validToDate" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Reading input Excel file&quot;]" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="510.4,3035.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="data\process_03\inputData.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476.8,2925.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadCell Cell="A2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[documentType]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_documentType" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_2" Value="[documentType.ToString]" />
+            <ui:ExcelReadCell Cell="B2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_2" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[salesOrgniazation]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_salesOrgniazation" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_3" Value="[salesOrgniazation.ToString]" />
+            <ui:ExcelReadCell Cell="C2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_3" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[distributionChannel]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_distributionChannel" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[distributionChannel.ToString]" />
+            <ui:ExcelReadCell Cell="D2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_4" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[division]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_division" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_4" Value="[division.ToString]" />
+            <ui:ExcelReadCell Cell="E2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_5" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[plant]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_plant" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_5" Value="[plant.ToString]" />
+            <ui:ExcelReadCell Cell="F2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_6" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[soldToParty]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_soldToParty" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_6" Value="[soldToParty.ToString]" />
+            <ui:ExcelReadCell Cell="G2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_7" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[shipToParty]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_shipToParty" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_7" Value="[shipToParty.ToString]" />
+            <ui:ExcelReadCell Cell="H2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_8" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[validFromDate]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_validFromDate" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_8" Value="[validFromDate.ToString]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,264" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Input data copied to assets&quot;]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <ui:ExcelReadCell Cell="I2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_9" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[validToDate]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_validToDate" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_9" Value="[validToDate.ToString]" />
+            <ui:ExcelReadCell Cell="J2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_10" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[materialNumber]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_materialNumber" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_10" Value="[materialNumber.ToString]" />
+            <ui:ExcelReadCell Cell="K2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_11" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[quantity]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_quantity" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_11" Value="[quantity.ToString]" />
+            <ui:ExcelReadCell Cell="L2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_12" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[conditionType]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_conditionType" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_12" Value="[conditionType.ToString]" />
+            <ui:ExcelReadCell Cell="M2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_13" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[amount]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_amount" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_13" Value="[amount.ToString]" />
+            <ui:ExcelReadCell Cell="O2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_14" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[documentType2]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_documentType2" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_14" Value="[documentType2.ToString]" />
+            <ui:ExcelReadCell Cell="Q2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_17" SheetName="P_03">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[shippingPoint]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_shippingPoint" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_17" Value="[shippingPoint.ToString]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Input data copied to assets&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+  </Sequence>
+</Activity>
