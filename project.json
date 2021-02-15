@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "BDG_processAutomation",
   "description": "Test Automation Project",
   "main": "Main.xaml",
@@ -46,6 +46,21 @@
         "editingStatus": "InProgress",
         "testCaseId": "e229a0f4-14f2-4c7c-95d4-eebb0b45f817",
         "fileName": "testCases\\process_03_processOrderEndToEnd.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "1c68e4f5-c80a-4a3d-9fb9-c4e41f85ce12",
+        "fileName": "testCases\\process_02_processOrderEndToEnd.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "12a85d74-55e8-40af-ac42-4f19fa582015",
+        "fileName": "testCases\\process_01_createNBStandardPurchaseOrder.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "aed79c6f-bb74-48e9-a30f-7eea9db9c8f2",
+        "fileName": "testCases\\process_06_GID_G2_Credit Memo.xaml"
       }
     ],
     "modernBehavior": false
