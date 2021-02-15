@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LS24_stockPerMaterial" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="875.2,2811.2" sap2010:WorkflowViewState.IdRef="LS24_stockPerMaterial_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LS24_stockPerMaterial" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_orchestratorFolderPath" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>748,2811.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>LS24_stockPerMaterial_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
@@ -59,17 +67,17 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_materialNumber_02" DisplayName="Get Asset" FolderPath="NewModFolder" sap:VirtualizedContainerService.HintSize="636,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_materialNumber_02" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="636,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[material]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_productionPlant" DisplayName="Get Asset" FolderPath="NewModFolder" sap:VirtualizedContainerService.HintSize="636,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_productionPlant" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="636,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[plant]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_wareHouseNumber" DisplayName="Get Asset" FolderPath="NewModFolder" sap:VirtualizedContainerService.HintSize="636,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_wareHouseNumber" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="636,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[wareHouseNumber]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -183,7 +191,7 @@
                         <OutArgument x:TypeArguments="x:String">[storageLocation]</OutArgument>
                       </ui:GetValue.Value>
                     </ui:GetValue>
-                    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="p1_storageLocation" DisplayName="Set Asset" FolderPath="NewModFolder" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[storageLocation]" />
+                    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="p1_storageLocation" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[storageLocation]" />
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Storage Location: &quot;+storageLocation]" />
                   </Sequence>
                 </If.Else>

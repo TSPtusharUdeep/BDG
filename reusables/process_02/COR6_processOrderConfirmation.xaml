@@ -1,11 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="COR6_processOrderConfirmation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_boolVal" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="in_orchestratorFolderPath" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>875.2,3113.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>748,3073.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>COR6_processOrderConfirmation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
@@ -58,7 +59,7 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="COR6_processOrderConfirmation" sap:VirtualizedContainerService.HintSize="644,2948.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="COR6_processOrderConfirmation" sap:VirtualizedContainerService.HintSize="644,2908.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="processOrder" />
       <Variable x:TypeArguments="x:Boolean" Name="radioExists" />
@@ -69,18 +70,18 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_processOrder" DisplayName="Get Asset" FolderPath="NewModFolder" sap:VirtualizedContainerService.HintSize="602.4,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_processOrder" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="602.4,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[processOrder]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Enter'" sap:VirtualizedContainerService.HintSize="602.4,2676.8" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="b05651f1bdeac5162d404c12387a0937" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Process Order Confirmation: Initial Screen' /&gt;">
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Enter'" sap:VirtualizedContainerService.HintSize="602.4,2636.8" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="b05651f1bdeac5162d404c12387a0937" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Process Order Confirmation: Initial Screen' /&gt;">
       <ui:WindowScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="568.8,2529.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="568.8,2489.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -110,13 +111,13 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Enter'" sap:VirtualizedContainerService.HintSize="527.2,2104" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="5f0c7e809f075e11117f7128dd25a637" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Enter Process Order Confirmation: Operation/Phase Overview' idx='*' /&gt;">
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Enter'" sap:VirtualizedContainerService.HintSize="527.2,2064" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="5f0c7e809f075e11117f7128dd25a637" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Enter Process Order Confirmation: Operation/Phase Overview' idx='*' /&gt;">
               <ui:WindowScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="493.6,1956.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence sap:VirtualizedContainerService.HintSize="493.6,1916.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="status" />
                     </Sequence.Variables>
@@ -125,7 +126,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,994.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,954.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -143,7 +144,7 @@
                           </ui:Target>
                         </ui:UiElementExists.Target>
                       </ui:UiElementExists>
-                      <ui:InterruptibleWhile Condition="[radioExists]" DisplayName="While" sap:VirtualizedContainerService.HintSize="410.4,507.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                      <ui:InterruptibleWhile Condition="[radioExists]" DisplayName="While" sap:VirtualizedContainerService.HintSize="410.4,467.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                         <ui:InterruptibleWhile.Body>
                           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,300" sap2010:WorkflowViewState.IdRef="Sequence_5">
                             <sap:WorkflowViewStateService.ViewState>

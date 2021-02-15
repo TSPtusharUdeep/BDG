@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="COR1_createProcessOrder_initialScreen" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="875.2,2876" sap2010:WorkflowViewState.IdRef="COR1_createProcessOrder_initialScreen_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="COR1_createProcessOrder_initialScreen" this:COR1_createProcessOrder_initialScreen.in_orchestratorFolderPath="NewModFolder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_orchestratorFolderPath" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>912,2876</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>COR1_createProcessOrder_initialScreen_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
       <x:String>System.Activities</x:String>
@@ -30,7 +38,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -47,6 +55,13 @@
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="COR1_createProcessOrder_initialScreen" sap:VirtualizedContainerService.HintSize="495.2,2711.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -62,17 +77,17 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_materialNumber_01" DisplayName="Get Asset" FolderPath="NewModFolder" sap:VirtualizedContainerService.HintSize="453.6,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_materialNumber_01" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="453.6,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[materialNumber]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_productionPlant" DisplayName="Get Asset" FolderPath="NewModFolder" sap:VirtualizedContainerService.HintSize="453.6,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_productionPlant" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="453.6,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[productionPlant]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_processOrderType" DisplayName="Get Asset" FolderPath="NewModFolder" sap:VirtualizedContainerService.HintSize="453.6,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="p1_processOrderType" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="453.6,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[processOrderType]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -140,7 +155,7 @@
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;details provided in respective fields in Create Process Order Initial-Screen.&quot;]" />
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke COR1_createProcessOrder_headerGeneralData workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="reusables\process_02\COR1_createProcessOrder_headerGeneralData.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                <InArgument x:TypeArguments="x:String" x:Key="in_orchestratorFolderPath">[in_orchestratorFolderPath]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Statusbar 'Statusbar Process'" sap:VirtualizedContainerService.HintSize="378.4,268" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[status]">
@@ -177,7 +192,7 @@
               </ui:TypeInto.Target>
             </ui:TypeInto>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[processOrder]" />
-            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="p1_processOrder" DisplayName="Set Asset" FolderPath="NewModFolder" sap:VirtualizedContainerService.HintSize="378.4,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[processOrder]" />
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="p1_processOrder" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="378.4,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[processOrder]" />
           </Sequence>
         </ActivityAction>
       </ui:WindowScope.Body>
