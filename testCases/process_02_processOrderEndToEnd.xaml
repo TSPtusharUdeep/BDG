@@ -76,9 +76,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke copyDataToAssets workflow" sap:VirtualizedContainerService.HintSize="346.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="reusables\process_02\copyDataToAssets.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_orchestratorFolderPath">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="orchestratorFolderPath" />
-          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_orchestratorFolderPath">[orchestratorFolderPath]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
