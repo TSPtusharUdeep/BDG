@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "BDG_processAutomation",
   "description": "Test Automation Project",
   "main": "Main.xaml",
@@ -61,6 +61,16 @@
         "editingStatus": "InProgress",
         "testCaseId": "aed79c6f-bb74-48e9-a30f-7eea9db9c8f2",
         "fileName": "testCases\\process_06_GID_G2_Credit Memo.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "06f13722-2d78-4593-8142-221c2ceb7dc7",
+        "fileName": "testCases\\process_03_GID_InernationalCContact_to_Cash.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "b2a83b57-ea0a-43e7-a046-e106a606d283",
+        "fileName": "testCases\\process_04_GID_DomesticContract_Order_to_Cash.xaml"
       }
     ],
     "modernBehavior": false
