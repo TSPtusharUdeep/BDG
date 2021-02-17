@@ -1,11 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="step_07_COR6_confirmProcessOrder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_boolVal" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="in_orchestratorFolderPath" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>875.2,614.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>748,614.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>step_07_COR6_confirmProcessOrder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
@@ -79,6 +80,9 @@
         <OutArgument x:TypeArguments="x:Boolean" x:Key="out_boolVal">
           <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="out_boolVal" />
         </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_orchestratorFolderPath">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_orchestratorFolderPath" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
