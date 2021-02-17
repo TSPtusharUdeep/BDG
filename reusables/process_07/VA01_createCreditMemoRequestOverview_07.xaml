@@ -160,7 +160,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'ComboBox Order'" sap:VirtualizedContainerService.HintSize="358.4,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="Poor Quality">
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'ComboBox Order'" sap:VirtualizedContainerService.HintSize="358.4,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="Damaged in Transit">
               <ui:SelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="50">
                   <x:String>Do Not Use Sales call</x:String>
@@ -294,7 +294,7 @@
                 <InArgument x:TypeArguments="x:String">[status.Split({" "}, stringsplitoptions.none)(3)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p6_creditMemoRequest" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="358.4,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[creditMemoRequest]" />
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p7_creditMemoRequest" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="358.4,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[creditMemoRequest]" />
             <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'OkCodeField  okcd'" sap:VirtualizedContainerService.HintSize="358.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="/i[k(enter)]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="019d7d93-3b21-49db-b3dc-50d9adcb43da" InformativeScreenshot="03350c95ca00ad030de2a6b6ee754e85" Selector="&lt;sap id='tbar[0]/okcd' /&gt;">
