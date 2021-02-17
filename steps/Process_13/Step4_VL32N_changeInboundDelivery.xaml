@@ -1,11 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Step4_VL32N_changeInboundDelivery" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="In_InboundDelivery1" Type="InArgument(x:String)" />
+    <x:Property Name="Out_ElementExist1" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>529.333333333333,584.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>569.333333333333,852.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Step4_VL32N_changeInboundDelivery_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -59,9 +60,10 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Step4_VL32N_changeInboundDelivery" sap:VirtualizedContainerService.HintSize="421.333333333333,380" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Step4_VL32N_changeInboundDelivery" sap:VirtualizedContainerService.HintSize="421.333333333333,688" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -81,9 +83,20 @@
     </ui:TypeInto>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Step4_VL32N_changeInboundDelivery_1 workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="reusables\process_13\Step4_VL32N_changeInboundDelivery_1.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="In_InboundDelivery2">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="In_InboundDelivery1" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_InboundDelivery2">[In_InboundDelivery1]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Step4_VL32N_changeInboundDelivery_2 workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="reusables\process_13\Step4_VL32N_changeInboundDelivery_2.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Step4_VL32N_changeInboundDelivery_3 workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="reusables\process_13\Step4_VL32N_changeInboundDelivery_3.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="Out_ElementExist2">
+          <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="Out_ElementExist1" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_msg2" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

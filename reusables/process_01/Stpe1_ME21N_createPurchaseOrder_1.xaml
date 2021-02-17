@@ -152,7 +152,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_01_supplierCode" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="798,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_supplierCode" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="798,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[Supplier]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -181,7 +181,7 @@
         </ui:Target>
       </ui:TypeInto.Target>
     </ui:TypeInto>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_01_Plant" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="798,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_6">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_Plant" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="798,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_6">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[Plant]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -192,7 +192,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_01_storageLocation" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="798,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_7">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_storageLocation" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="798,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_7">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[StorageLoction]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -203,7 +203,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_01_materialCode" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="798,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_materialCode" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="798,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[material]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -214,7 +214,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_01_PO_Quantity" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="798,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_PO_Quantity" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="798,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[PO]</OutArgument>
       </ui:GetRobotAsset.Value>

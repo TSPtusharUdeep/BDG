@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Set_Assets" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="651.333333333333,901.333333333333" sap2010:WorkflowViewState.IdRef="Set_Assets_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Set_Assets" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_orchestratorPath1" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>594,901.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Set_Assets_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
       <x:String>System.Activities</x:String>
@@ -31,7 +39,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -52,6 +60,13 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Set_Assets" sap:VirtualizedContainerService.HintSize="376,736.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -64,14 +79,14 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[DT_input]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="P_01" WorkbookPath="data\process_01\inputData.xlsx" />
-    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_01_supplierCode" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[cint(DT_input.Rows(1)(4).ToString)]" />
-    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_01_purchaseOrganisation" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_2" Value="[cint(DT_input.Rows(2)(4).ToString)]" />
-    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_01_purchasingGroup" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_3" Value="[cint(DT_input.rows(3)(4).ToString)]" />
-    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_01_companyCode" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_4" Value="[cint(DT_input.Rows(4)(4).ToString)]" />
-    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_01_materialCode" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_5" Value="[(DT_input.rows(5)(4).ToString)]" />
-    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_01_PO_Quantity" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_6" Value="[cint(DT_input.Rows(6)(4).ToString)]" />
-    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_01_Plant" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_7" Value="[cint(DT_input.rows(7)(4).ToString)]" />
-    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_01_storageLocation" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_8" Value="[cint(DT_input.rows(8)(4).ToString)]" />
-    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_01_packagingMaterials" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_9" Value="[DT_input.rows(13)(4).ToString]" />
+    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_supplierCode" DisplayName="Set Asset" FolderPath="[In_orchestratorPath1]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[cint(DT_input.Rows(0)(1).ToString)]" />
+    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_purchaseOrganisation" DisplayName="Set Asset" FolderPath="[In_orchestratorPath1]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_2" Value="[cint(DT_input.Rows(0)(2).ToString)]" />
+    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_purchasingGroup" DisplayName="Set Asset" FolderPath="[In_orchestratorPath1]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_3" Value="[cint(DT_input.rows(0)(3).ToString)]" />
+    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_companyCode" DisplayName="Set Asset" FolderPath="[In_orchestratorPath1]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_4" Value="[cint(DT_input.Rows(0)(4).ToString)]" />
+    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_materialCode" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_5" Value="[(DT_input.rows(0)(5).ToString)]" />
+    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_PO_Quantity" DisplayName="Set Asset" FolderPath="[In_orchestratorPath1]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_6" Value="[cint(DT_input.Rows(0)(6).ToString)]" />
+    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_Plant" DisplayName="Set Asset" FolderPath="[In_orchestratorPath1]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_7" Value="[cint(DT_input.rows(0)(7).ToString)]" />
+    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_storageLocation" DisplayName="Set Asset" FolderPath="[In_orchestratorPath1]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_8" Value="[cint(DT_input.rows(0)(8).ToString)]" />
+    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p01_packagingMaterials" DisplayName="Set Asset" FolderPath="[In_orchestratorPath1]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SetAsset_9" Value="[DT_input.rows(0)(9).ToString]" />
   </Sequence>
 </Activity>

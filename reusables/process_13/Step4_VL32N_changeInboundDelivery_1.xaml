@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>529.333333333333,682.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>594,682.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Step4_VL32N_changeInboundDelivery_1_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -83,7 +83,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8fcbc67d-7c39-4aac-9db8-121d2f4a43e4" InformativeScreenshot="f019c6da70941c145a27d1e13f905317" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Inbound Delivery* Overview' /&gt;&lt;sap id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV50A:1202/tblSAPMV50ATC_LIPS_OVER_INB' tableRow='0' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8fcbc67d-7c39-4aac-9db8-121d2f4a43e4" InformativeScreenshot="f019c6da70941c145a27d1e13f905317" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Inbound Delivery*Change: Overview' /&gt;&lt;sap id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\*/ssubSUBSCREEN_BODY:SAPMV50A*/tblSAPMV50ATC_LIPS_PICK_INB' tableRow='0' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
