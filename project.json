@@ -46,36 +46,6 @@
         "editingStatus": "InProgress",
         "testCaseId": "e229a0f4-14f2-4c7c-95d4-eebb0b45f817",
         "fileName": "testCases\\process_03_processOrderEndToEnd.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "1c68e4f5-c80a-4a3d-9fb9-c4e41f85ce12",
-        "fileName": "testCases\\process_02_processOrderEndToEnd.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "12a85d74-55e8-40af-ac42-4f19fa582015",
-        "fileName": "testCases\\process_01_createNBStandardPurchaseOrder.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "aed79c6f-bb74-48e9-a30f-7eea9db9c8f2",
-        "fileName": "testCases\\process_06_GID_G2_Credit Memo.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "06f13722-2d78-4593-8142-221c2ceb7dc7",
-        "fileName": "testCases\\process_03_GID_InernationalCContact_to_Cash.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "b2a83b57-ea0a-43e7-a046-e106a606d283",
-        "fileName": "testCases\\process_04_GID_DomesticContract_Order_to_Cash.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "336fbeb5-fff3-4d11-ba58-fbc457a5cb4f",
-        "fileName": "testCases\\process_05_GID_SpotOrder.xaml"
       }
     ],
     "modernBehavior": false
