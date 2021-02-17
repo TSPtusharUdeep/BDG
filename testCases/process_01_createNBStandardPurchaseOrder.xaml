@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="process_01_createNBStandardPurchaseOrder" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="650,1460" sap2010:WorkflowViewState.IdRef="process_01_createNBStandardPurchaseOrder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="process_01_createNBStandardPurchaseOrder" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="656,1552" sap2010:WorkflowViewState.IdRef="process_01_createNBStandardPurchaseOrder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
       <x:String>System.Activities</x:String>
@@ -59,7 +59,7 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="process_01_createNBStandardPurchaseOrder" sap:VirtualizedContainerService.HintSize="618,1295.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="process_01_createNBStandardPurchaseOrder" sap:VirtualizedContainerService.HintSize="618,1387.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="boolVal" />
     </Sequence.Variables>
@@ -75,7 +75,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Sequence>
-    <Sequence DisplayName="When" sap:VirtualizedContainerService.HintSize="576,884" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="When" sap:VirtualizedContainerService.HintSize="576,976" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Out_InboundDelivery" />
         <Variable x:TypeArguments="x:String" Name="Out_batch" />
@@ -95,7 +95,11 @@
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <Delay Duration="00:01:30" sap:VirtualizedContainerService.HintSize="379.333333333333,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SE38_hackCreationForInboundDelivery workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="reusables\process_01\SE38_hackCreationForInboundDelivery.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Step2_ME23N_inboundDeliveryDocumentNo workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="steps\process_01\Step2_ME23N_inboundDeliveryDocumentNo.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="x:String" x:Key="Out_InboundDelivery1">[Out_InboundDelivery]</OutArgument>
@@ -109,12 +113,8 @@
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Step4_QA32_changeInspection workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="steps\process_01\Step4_QA32_changeInspection.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="In_batch1">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_batch" />
-          </InArgument>
-          <OutArgument x:TypeArguments="x:Boolean" x:Key="Out_ElementExist1">
-            <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="boolVal" />
-          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_batch1">[Out_batch]</InArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="Out_ElementExist1">[boolVal]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>

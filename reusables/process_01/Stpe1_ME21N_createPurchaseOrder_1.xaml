@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Stpe1_Create_Purchase_Order_ME21N__1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="830,3965.33333333333" sap2010:WorkflowViewState.IdRef="Stpe1_Create_Purchase_Order_ME21N__1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Stpe1_Create_Purchase_Order_ME21N__1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="830,4011.33333333333" sap2010:WorkflowViewState.IdRef="Stpe1_Create_Purchase_Order_ME21N__1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
       <x:String>System.Activities</x:String>
@@ -57,7 +57,7 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Stpe1_Create_Purchase_Order_ME21N__1" sap:VirtualizedContainerService.HintSize="840,3800.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Stpe1_Create_Purchase_Order_ME21N__1" sap:VirtualizedContainerService.HintSize="840,3846.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Supplier" />
       <Variable x:TypeArguments="x:Boolean" Name="ElementExist" />
@@ -65,24 +65,24 @@
       <Variable x:TypeArguments="x:String" Name="PO" />
       <Variable x:TypeArguments="x:String" Name="Plant" />
       <Variable x:TypeArguments="x:String" Name="StorageLoction" />
-      <Variable x:TypeArguments="x:Boolean" Name="elementexis1" />
       <Variable x:TypeArguments="x:Boolean" Name="Elementexist2" />
+      <Variable x:TypeArguments="x:Boolean" Name="ElementExist1" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:UiElementExists DisplayName="Element Exists 'ScrollContainer  TABSTR...'" Exists="[elementexis1]" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+    <ui:UiElementExists DisplayName="Element Exists 'Button Collapse'" Exists="[ElementExist1]" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b8f81376-a1f4-4bb9-94ea-a8825d3beb4e" InformativeScreenshot="72b7c2c7e469fad002e69a92148da228" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI:0013/subSUB1:SAPLMEVIEWS:1100/subSUB2:SAPLMEVIEWS:1200/subSUB1:SAPLMEGUI:1102/tabsHEADER_DETAIL/tabpTABHDT8/ssubTABSTRIPCONTROL2SUB:SAPLMEGUI:1221' /&gt;" TimeoutMS="0">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="16388cbe-b82c-4d79-99f8-77e1d5dfc798" InformativeScreenshot="7bbce674fdda903db4c3a65fb35f4038" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI:0013/subSUB1:SAPLMEVIEWS*/subSUB1:SAPLMEVIEWS*/btnDYN*-BUTTON' /&gt;" TimeoutMS="0">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[elementexis1]" sap:VirtualizedContainerService.HintSize="798,260" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[ElementExist1]" sap:VirtualizedContainerService.HintSize="798,260" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button Collapse'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
           <ui:Click.CursorPosition>
@@ -96,7 +96,7 @@
             </ui:CursorPosition>
           </ui:Click.CursorPosition>
           <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4dfaee43-cacd-4cbe-a8fa-3ecc9158dc6f" InformativeScreenshot="1a08afe6845039e69fadfa52b816890c" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI:0013/subSUB1:SAPLMEVIEWS:1100/subSUB1:SAPLMEVIEWS:4000/btnDYN_4000-BUTTON' /&gt;">
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4dfaee43-cacd-4cbe-a8fa-3ecc9158dc6f" InformativeScreenshot="1a08afe6845039e69fadfa52b816890c" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI*/subSUB1:SAPLMEVIEWS*/subSUB1:SAPLMEVIEWS*/btnDYN_*-BUTTON' /&gt;">
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
@@ -545,9 +545,9 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[Elementexist2]" sap:VirtualizedContainerService.HintSize="798,214" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[Elementexist2]" sap:VirtualizedContainerService.HintSize="798,260" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Else>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button Expand'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button Expand'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
           <ui:Click.CursorPosition>
             <ui:CursorPosition Position="Center">
               <ui:CursorPosition.OffsetX>
@@ -559,7 +559,7 @@
             </ui:CursorPosition>
           </ui:Click.CursorPosition>
           <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fc9e33a2-d253-43ef-9d2c-665e0d1e47f9" InformativeScreenshot="fc5f3a8eaf4bcc43965def27e1e6cbc4" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI:0021/subSUB1:SAPLMEVIEWS:1100/subSUB1:SAPLMEVIEWS:4000/btnDYN_4000-BUTTON' /&gt;">
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fc9e33a2-d253-43ef-9d2c-665e0d1e47f9" InformativeScreenshot="fc5f3a8eaf4bcc43965def27e1e6cbc4" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI*/subSUB1:SAPLMEVIEWS*/subSUB1:SAPLMEVIEWS*/btnDYN_*-BUTTON' /&gt;">
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
@@ -570,7 +570,7 @@
           </ui:Click.Target>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
