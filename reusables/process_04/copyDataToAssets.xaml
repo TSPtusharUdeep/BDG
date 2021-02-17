@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,3588</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824,3912.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>copyDataToAssets_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
@@ -68,7 +68,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="copyDataToAssets" sap:VirtualizedContainerService.HintSize="552,3423.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="copyDataToAssets" sap:VirtualizedContainerService.HintSize="552,3748" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:GenericValue" Name="distributionChannel" />
       <Variable x:TypeArguments="ui:GenericValue" Name="documentType" />
@@ -92,15 +92,17 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Reading input Excel file&quot;]" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="510.4,3197.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="data\process_04\inputData.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="510.4,3522.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="data\process_04\inputData.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476.8,3088" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476.8,3412.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:GenericValue" Name="quantity_2" />
+              <Variable x:TypeArguments="x:String" Name="currency" />
+              <Variable x:TypeArguments="x:String" Name="unitOfMeasure" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -197,6 +199,12 @@
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
             <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p04_amount" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_13" Value="[amount.ToString]" />
+            <ui:ExcelReadCell Cell="N2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_19" SheetName="P_04">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="x:String">[currency]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p04_currency" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_19" Value="[currency.ToString]" />
             <ui:ExcelReadCell Cell="O2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_14" SheetName="P_04">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="ui:GenericValue">[documentType2]</OutArgument>
@@ -215,6 +223,12 @@
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
             <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p04_shippingPoint" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_17" Value="[shippingPoint.ToString]" />
+            <ui:ExcelReadCell Cell="S2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_20" SheetName="P_04">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="x:String">[unitOfMeasure]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p04_unitOfMeasure" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_20" Value="[unitOfMeasure.ToString]" />
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Input data copied to assets&quot;]" />
           </Sequence>
         </ActivityAction>

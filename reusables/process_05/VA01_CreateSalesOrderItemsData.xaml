@@ -60,7 +60,7 @@
       <Variable x:TypeArguments="x:String" Name="amount" />
       <Variable x:TypeArguments="x:String" Name="conditionType" />
       <Variable x:TypeArguments="x:String" Name="currency" />
-      <Variable x:TypeArguments="x:String" Name="percingUnit" />
+      <Variable x:TypeArguments="x:String" Name="pricingUnit" />
       <Variable x:TypeArguments="x:String" Name="unitOfMeasure" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -78,12 +78,12 @@
         <OutArgument x:TypeArguments="x:String">[amount]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p04_currency" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="443.2,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p05_currency" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="443.2,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[currency]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p04_unitOfMeasure" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="443.2,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p05_unitOfMeasure" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="443.2,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[unitOfMeasure]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -100,7 +100,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a302c480-e050-4138-ba07-e1b2d6b6cf8d" InformativeScreenshot="bc2aeda9a65b261b690247529619f2dd" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Overview' /&gt;&lt;sap colTooltip='Material' id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4406/subSUBSCREEN_TC:SAPMV45A:4906/tblSAPMV45ATCTRL_U_ERF_LIEFERPLAN' tableRow='0' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a302c480-e050-4138-ba07-e1b2d6b6cf8d" InformativeScreenshot="bc2aeda9a65b261b690247529619f2dd" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Overview' /&gt;&#xD;&#xA;&lt;sap colTooltip='Material' id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4400/subSUBSCREEN_TC:SAPMV45A:4900/tblSAPMV45ATCTRL_U_ERF_AUFTRAG' tableRow='0' tableCol='1' /&gt;&#xD;&#xA;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -122,7 +122,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="51b5546c-e49c-468d-b0b0-0bbc2fe1bc2f" InformativeScreenshot="667bf0f07a03d68e0f1a9c96e418c419" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Item Data' /&gt;&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="51b5546c-e49c-468d-b0b0-0bbc2fe1bc2f" InformativeScreenshot="667bf0f07a03d68e0f1a9c96e418c419" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;&#xD;&#xA;&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05' /&gt;&#xD;&#xA;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -134,7 +134,7 @@
     </ui:Click>
     <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'TableControl Pricing'" sap:VirtualizedContainerService.HintSize="443.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="pgdn" KeyModifiers="None" SpecialKey="True">
       <ui:SendHotkey.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5822c2ab-12b9-4a9e-8a37-d2e7b8028038" InformativeScreenshot="c937d5f69b2164b11d7e7130d2eb8506" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Item Data' /&gt;&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5822c2ab-12b9-4a9e-8a37-d2e7b8028038" InformativeScreenshot="c937d5f69b2164b11d7e7130d2eb8506" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -146,7 +146,7 @@
     </ui:SendHotkey>
     <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  CnTy'" sap:VirtualizedContainerService.HintSize="443.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[conditionType]">
       <ui:TypeInto.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8526e13-5168-4ea4-bd09-5f9c7759e35c" InformativeScreenshot="58acc2783490a4905921938aebce0c41" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Item Data' /&gt;&#xA;&lt;sap colTooltip='Condition type' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='16' /&gt;&#xA;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8526e13-5168-4ea4-bd09-5f9c7759e35c" InformativeScreenshot="58acc2783490a4905921938aebce0c41" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;&#xD;&#xA;&lt;sap colTooltip='Condition type' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='16' tableCol='1' /&gt;&#xD;&#xA;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -158,7 +158,7 @@
     </ui:TypeInto>
     <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TextField  Amount'" sap:VirtualizedContainerService.HintSize="443.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[amount]">
       <ui:TypeInto.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1ebe8b37-8a76-4c3a-be2e-96b22bd59afd" InformativeScreenshot="b62879c74e584665e955c2d20a31a352" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Item Data' /&gt;&#xA;&lt;sap colTooltip='Amount' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='16' tableCol='3' /&gt;&#xA;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1ebe8b37-8a76-4c3a-be2e-96b22bd59afd" InformativeScreenshot="b62879c74e584665e955c2d20a31a352" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;&#xD;&#xA;&lt;sap colTooltip='Amount' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='16' tableCol='3' /&gt;&#xD;&#xA;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -170,7 +170,7 @@
     </ui:TypeInto>
     <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  Crcy'" sap:VirtualizedContainerService.HintSize="443.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[currency]">
       <ui:TypeInto.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9e980019-e576-4fe3-afdd-9b913642b8f4" InformativeScreenshot="60ab6babf8c73a474039658b77c1c53d" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Item Data' /&gt;&#xA;&lt;sap colTooltip='Condition Unit' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='16' tableCol='4' /&gt;&#xA;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9e980019-e576-4fe3-afdd-9b913642b8f4" InformativeScreenshot="60ab6babf8c73a474039658b77c1c53d" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;&#xD;&#xA;&lt;sap colTooltip='Condition Unit' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='16' tableCol='4' /&gt;&#xD;&#xA;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -205,7 +205,7 @@
     </ui:CommentOut>
     <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  UoM'" sap:VirtualizedContainerService.HintSize="443.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[unitOfMeasure]">
       <ui:TypeInto.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="647fea1d-3111-4423-94ad-5779565ef5b9" InformativeScreenshot="279fddc440acf73c10c8b5dcde229664" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Item Data' /&gt;&#xA;&lt;sap colTooltip='Condition Unit' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='16' tableCol='6' /&gt;&#xA;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="647fea1d-3111-4423-94ad-5779565ef5b9" InformativeScreenshot="279fddc440acf73c10c8b5dcde229664" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;&#xD;&#xA;&lt;sap colTooltip='Condition Unit' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='16' tableCol='6' /&gt;&#xD;&#xA;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -239,7 +239,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3548d934-5905-493d-89f7-dd751b28989b" InformativeScreenshot="4028e63dc205b1a2a10d97fd6e76fd81" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Item Data' /&gt;&lt;sap id='tbar[0]/btn[3]' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3548d934-5905-493d-89f7-dd751b28989b" InformativeScreenshot="2405e2a6d8528b965e8aef2bd159925b" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;&lt;sap id='tbar[0]/btn[3]' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
