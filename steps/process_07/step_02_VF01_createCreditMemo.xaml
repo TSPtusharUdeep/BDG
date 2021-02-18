@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>768.8,614.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>873.6,614.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>step_02_VF01_createCreditMemo_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -70,17 +70,15 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke navigateFromHome workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="reusables\navigateFromHome.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_transactionCode">VF01</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_transactionCode">
+          <Literal x:TypeArguments="x:String">VF01</Literal>
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke VF01_createCreditMemo workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="reusables\process_07\VF01_createCreditMemo_07.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_orchestratorFolderPath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_orchestratorFolderPath" />
-        </InArgument>
-        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_boolVal">
-          <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="out_boolVal" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_orchestratorFolderPath">[in_orchestratorFolderPath]</InArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_boolVal">[out_boolVal]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
