@@ -5,10 +5,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>569.333333333333,5358.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>547.333333333333,5804.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Step1_Me21N_createPurchaseOrder_1_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="48">
+    <scg:List x:TypeArguments="x:String" Capacity="25">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -65,7 +65,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Step1_Me21N_createPurchaseOrder_1" sap:VirtualizedContainerService.HintSize="526,5194" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Step1_Me21N_createPurchaseOrder_1" sap:VirtualizedContainerService.HintSize="526,5640" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="SupplierPlant" />
       <Variable x:TypeArguments="x:String" Name="purchaseOrganisation" />
@@ -79,6 +79,7 @@
       <Variable x:TypeArguments="x:String" Name="shippingCondition" />
       <Variable x:TypeArguments="x:String" Name="Route" />
       <Variable x:TypeArguments="x:Boolean" Name="ShippingExist" />
+      <Variable x:TypeArguments="x:Boolean" Name="ElementExist" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -114,7 +115,7 @@
         </scg:List>
       </ucas:ClickToolbarButton.Items>
       <ucas:ClickToolbarButton.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="457fab70-0e7e-4f00-ad7b-e06f6b7040e2" InformativeScreenshot="d3ae9bb0981b509187c8fd26a73fc6fd" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI:0013/subSUB0:SAPLMEGUI:0030/subSUB1:SAPLMEGUI:1105/cmbMEPO_TOPLINE-BSART' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="457fab70-0e7e-4f00-ad7b-e06f6b7040e2" InformativeScreenshot="d3ae9bb0981b509187c8fd26a73fc6fd" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI*/subSUB0:SAPLMEGUI:0030/subSUB1:SAPLMEGUI:1105/cmbMEPO_TOPLINE-BSART' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -136,12 +137,47 @@
         </ui:Target>
       </ui:TypeInto.Target>
     </ui:TypeInto>
+    <ui:UiElementExists DisplayName="Element Exists 'Button Expand'" Exists="[ElementExist]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+      <ui:UiElementExists.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b17e671b-3221-41e3-ac6b-8ab76e821b12" InformativeScreenshot="d5e68bd445f73957aec28bdea6b43c32" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI:0016/subSUB1:SAPLMEVIEWS*/subSUB1:SAPLMEVIEWS*/btnDYN*-BUTTON' /&gt;" TimeoutMS="0">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:UiElementExists.Target>
+    </ui:UiElementExists>
+    <If Condition="[ElementExist]" sap:VirtualizedContainerService.HintSize="484,260" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button Expand'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:Click.CursorPosition>
+            <ui:CursorPosition Position="Center">
+              <ui:CursorPosition.OffsetX>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetX>
+              <ui:CursorPosition.OffsetY>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetY>
+            </ui:CursorPosition>
+          </ui:Click.CursorPosition>
+          <ui:Click.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7c0202f6-9060-425c-840d-f438aac98542" InformativeScreenshot="c953965d5d2e8ad350418ace671c073b" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI:0016/subSUB1:SAPLMEVIEWS*/subSUB1:SAPLMEVIEWS*/btnDYN*-BUTTON' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:Click.Target>
+        </ui:Click>
+      </If.Then>
+    </If>
     <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p12_purchaseOrganisation" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="484,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[purchaseOrganisation]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField Purchasing'" EmptyField="True" sap:VirtualizedContainerService.HintSize="444,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[purchaseOrganisation]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField Purchasing'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[purchaseOrganisation]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="24fed1b4-3237-4360-a476-14a34554124b" InformativeScreenshot="2cac2687bf3389868fc90e36c6368472" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI*/subSUB1:SAPLMEVIEWS*/subSUB2:SAPLMEVIEWS*/subSUB1:SAPLMEGUI*/tabsHEADER_DETAIL/tabpTABHDT8/ssubTABSTRIPCONTROL2SUB:SAPLMEGUI*/ctxtMEPO*-EKORG' /&gt;">
           <ui:Target.TimeoutMS>
@@ -153,12 +189,12 @@
         </ui:Target>
       </ui:TypeInto.Target>
     </ui:TypeInto>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p12_purchasingGroup" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p12_purchasingGroup" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="484,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[PurchaseGroup]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField Purchasing'" EmptyField="True" sap:VirtualizedContainerService.HintSize="444,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[PurchaseGroup]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField Purchasing'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[PurchaseGroup]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5a4bf685-1fa8-4df9-9a49-ea0b8393c039" InformativeScreenshot="37e87972fd0043c4c41b17e6d1eabbc4" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI*/subSUB1:SAPLMEVIEWS*/subSUB2:SAPLMEVIEWS*/subSUB1:SAPLMEGUI*/tabsHEADER_DETAIL/tabpTABHDT8/ssubTABSTRIPCONTROL2SUB:SAPLMEGUI*/ctxtMEPO*-EKGRP' /&gt;">
           <ui:Target.TimeoutMS>
@@ -170,12 +206,12 @@
         </ui:Target>
       </ui:TypeInto.Target>
     </ui:TypeInto>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p13_Company Code" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p13_Company Code" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="484,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[CompanyCode]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  Company Code'" EmptyField="True" sap:VirtualizedContainerService.HintSize="444,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[CompanyCode]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  Company Code'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[CompanyCode]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="33320a22-ad22-41ea-9998-173b1a0e167e" InformativeScreenshot="77b93e7ce4322398a21210d00e497742" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI*/subSUB1:SAPLMEVIEWS*/subSUB2:SAPLMEVIEWS*/subSUB1:SAPLMEGUI*/tabsHEADER_DETAIL/tabpTABHDT8/ssubTABSTRIPCONTROL2SUB:SAPLMEGUI*/ctxtMEPO*-BUKRS' /&gt;">
           <ui:Target.TimeoutMS>

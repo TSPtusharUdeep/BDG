@@ -82,7 +82,7 @@
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="InboundDelivery" />
         <Variable x:TypeArguments="x:String" Name="OutboundDelivery" />
-        <Variable x:TypeArguments="x:String" Name="In_orchestratorpath">
+        <Variable x:TypeArguments="x:String" Name="OrchestratorPath">
           <Variable.Default>
             <Literal x:TypeArguments="x:String">Default</Literal>
           </Variable.Default>
@@ -95,8 +95,8 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Set Assets workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="steps\Process_13\Set Assets.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="In_orchestratorpath1">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="In_orchestratorpath" />
+          <InArgument x:TypeArguments="x:String" x:Key="In_OrchestratorPath1">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="OrchestratorPath" />
           </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
