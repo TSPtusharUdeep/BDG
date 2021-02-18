@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Step1_Create_Purchase_Order_ME21N__1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="529.333333333333,1324" sap2010:WorkflowViewState.IdRef="Step1_Create_Purchase_Order_ME21N__1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Step1_Create_Purchase_Order_ME21N__1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="914.4,1185.6" sap2010:WorkflowViewState.IdRef="Step1_Create_Purchase_Order_ME21N__1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
       <x:String>System.Activities</x:String>
@@ -47,7 +47,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Step1_Create_Purchase_Order_ME21N__1" sap:VirtualizedContainerService.HintSize="486,1159.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Step1_Create_Purchase_Order_ME21N__1" sap:VirtualizedContainerService.HintSize="485.6,980.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Supplier" />
       <Variable x:TypeArguments="x:String" Name="PuchaseOrg" />
@@ -60,7 +60,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_13_supplierPlant" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_13_supplierPlant" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,52.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[Supplier]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -71,7 +71,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_13_purchaseOrganisation" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_13_purchaseOrganisation" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,52.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[PuchaseOrg]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -82,7 +82,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_13_purchasingGroup" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_13_purchasingGroup" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,52.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[PurchaseGruop]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -93,7 +93,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_13_companyCode" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_13_companyCode" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,52.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[CompanyCode]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -104,8 +104,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset AssetName="{x:Null}" TimeoutMS="{x:Null}" Value="{x:Null}" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5" />
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'ComboBox  Order Type'" sap:VirtualizedContainerService.HintSize="444,52.6666666666667" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="ZXS[k(enter)]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'ComboBox  Order Type'" sap:VirtualizedContainerService.HintSize="444,52.8" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="ZXS[k(enter)]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="674b4459-136e-4bb8-915a-246b9a240db7" InformativeScreenshot="7e78d2d1be86d752a74400322343ca22" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI:0013/subSUB0:SAPLMEGUI:0030/subSUB1:SAPLMEGUI:1105/cmbMEPO_TOPLINE-BSART' /&gt;">
           <ui:Target.TimeoutMS>
@@ -123,7 +122,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TypeInto>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField Supplier'" sap:VirtualizedContainerService.HintSize="444,52.6666666666667" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[Supplier]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField Supplier'" sap:VirtualizedContainerService.HintSize="444,52.8" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[Supplier]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="395f0ffe-acba-4f30-ab0f-b8f8c7137093" InformativeScreenshot="ce31afffc8cc6467ef5f528e7611a016" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Purchase Order' /&gt;&lt;sap id='usr/subSUB0:SAPLMEGUI:0013/subSUB0:SAPLMEGUI:0030/subSUB1:SAPLMEGUI:1105/ctxtMEPO_TOPLINE-SUPERFIELD' /&gt;">
           <ui:Target.TimeoutMS>
