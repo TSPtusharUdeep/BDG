@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,2288</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>863.2,996</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Test1_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -66,7 +66,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ScrapingQuantityContract" sap:VirtualizedContainerService.HintSize="595.2,2123.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ScrapingQuantityContract" sap:VirtualizedContainerService.HintSize="375.2,831.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Statusbar" />
       <Variable x:TypeArguments="x:String" Name="contractNumber" />
@@ -76,7 +76,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" DisplayName="Read Statusbar 'Statusbar Quantity'" sap:VirtualizedContainerService.HintSize="553.6,268" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[Statusbar]" MessageType="[Statusbar]">
+    <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" DisplayName="Read Statusbar 'Statusbar Quantity'" sap:VirtualizedContainerService.HintSize="333.6,268" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[Statusbar]" MessageType="[Statusbar]">
       <ucas:ReadStatusbar.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c27d967d-2169-4bcb-b5c3-38d81569a09c" InformativeScreenshot="68edd999e9d530cf63b34f9a197c659d" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Overview' /&gt;&lt;sap id='sbar' /&gt;">
           <ui:Target.TimeoutMS>
@@ -88,7 +88,7 @@
         </ui:Target>
       </ucas:ReadStatusbar.Target>
     </ucas:ReadStatusbar>
-    <Assign sap:VirtualizedContainerService.HintSize="553.6,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[contractNumber]</OutArgument>
       </Assign.To>
@@ -96,125 +96,9 @@
         <InArgument x:TypeArguments="x:String">[Statusbar.split({" "},stringsplitoptions.none)(2)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="553.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Statusbar]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="553.6,1252" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="518.4,1173.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="476.8,1080.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="ui:GenericValue" Name="status" />
-            </Sequence.Variables>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'Statusbar Quantity'" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
-              <ui:Click.CursorPosition>
-                <ui:CursorPosition Position="Center">
-                  <ui:CursorPosition.OffsetX>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetX>
-                  <ui:CursorPosition.OffsetY>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetY>
-                </ui:CursorPosition>
-              </ui:Click.CursorPosition>
-              <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cffd74bb-cee8-4d69-bd63-44887fbaed1e" InformativeScreenshot="645bd9737bde80d16e8790526ca570d3" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Overview' /&gt;&#xA;&lt;sap id='sbar' /&gt;&#xA;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:Click.Target>
-            </ui:Click>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'Conversio Page'" sap:VirtualizedContainerService.HintSize="435.2,347.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="de1b3c4317f574674f61ae1543832f91" Selector="&lt;html app='saplogon.exe' title='Conversion of SAPscript Text HELP_DOKU to HTML' /&gt;">
-              <ui:BrowserScope.Body>
-                <ActivityAction x:TypeArguments="x:Object">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:GetFullText DisplayName="Get Full Text 'H3'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetFullText_1" IgnoreHidden="False">
-                      <ui:GetFullText.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="129ac77d-60ac-4a75-a5e4-51954c91fd6a" InformativeScreenshot="022d63e039e6f9c98c6b1c971faf6b29" Selector="&lt;webctrl tag='H3' /&gt;" WaitForReady="COMPLETE">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                        </ui:Target>
-                      </ui:GetFullText.Target>
-                      <ui:GetFullText.Text>
-                        <OutArgument x:TypeArguments="x:String">[Statusbar]</OutArgument>
-                      </ui:GetFullText.Text>
-                    </ui:GetFullText>
-                  </Sequence>
-                </ActivityAction>
-              </ui:BrowserScope.Body>
-            </ui:BrowserScope>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,453.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,375.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
-                    <ui:Click.CursorPosition>
-                      <ui:CursorPosition Position="Center">
-                        <ui:CursorPosition.OffsetX>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetX>
-                        <ui:CursorPosition.OffsetY>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetY>
-                      </ui:CursorPosition>
-                    </ui:Click.CursorPosition>
-                    <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aea10d3c-9f5f-4d93-8215-e3af09a6c900" InformativeScreenshot="327999b525ab41a28ba8b3d6632d25b0" Selector="&lt;wnd app='saplogon.exe' cls='DialogBox Container Class' title='Performance Assistant' /&gt;&lt;wnd cls='Shell Window Class' idx='1' title='Control  Container' /&gt;&lt;wnd cls='Custom Container Class' idx='1' title='Custom  Container' /&gt;&lt;wnd cls='Shell Window Class' title='Control  Container' /&gt;&lt;wnd cls='SysPager' title='SAPPagerForToolbar' /&gt;&lt;wnd cls='ToolbarWindow32' /&gt;&lt;ctrl idx='12' name=' ' role='push button' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:Click.Target>
-                  </ui:Click>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'OkCodeField  okcd'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="/i">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9f148815-cbe4-4b1f-a342-7f43b3370c08" InformativeScreenshot="177c14ab2b476223dec2c122478b36c0" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Overview' /&gt;&lt;sap id='tbar[0]/okcd' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                  </ui:TypeInto>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-          </Sequence>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_contractNumber" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="553.6,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[contractNumber]" />
-    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Type Into 'OkCodeField  okcd'" sap:VirtualizedContainerService.HintSize="553.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[&quot;/i&quot;+ &quot;[k(enter)]&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Statusbar]" />
+    <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_contractNumber" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[contractNumber]" />
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Type Into 'OkCodeField  okcd'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[&quot;/i&quot;+ &quot;[k(enter)]&quot;]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9f148815-cbe4-4b1f-a342-7f43b3370c08" InformativeScreenshot="2089e14e1b6ded30f07c88cbefd62fc8" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Overview' /&gt;&lt;sap id='tbar[0]/okcd' /&gt;">
           <ui:Target.TimeoutMS>

@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>873.6,1245.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>863.2,1245.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VF01_ScrapeCreateInvoice_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
@@ -97,7 +97,7 @@
     </Assign>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Statusbar]" />
     <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_documentNumber" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="568.8,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[documentNumber]" />
-    <If Condition="[Statusbar.Split({&quot; &quot;}, stringsplitoptions.none)(4)=&quot;saved&quot;]" sap:VirtualizedContainerService.HintSize="568.8,209.6" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Statusbar.Split({&quot; &quot;}, stringsplitoptions.none)(4)=&quot;saved.&quot;]" sap:VirtualizedContainerService.HintSize="568.8,209.6" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
           <Assign.To>

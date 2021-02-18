@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,1245.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>863.2,1378.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VF01_ScrapeCreateInvoice_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
@@ -65,7 +65,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="VF01_ScrapeCreateInvoice" sap:VirtualizedContainerService.HintSize="610.4,1080.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="VF01_ScrapeCreateInvoice" sap:VirtualizedContainerService.HintSize="610.4,1213.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Statusbar" />
       <Variable x:TypeArguments="x:String" Name="documentNumber" />
@@ -95,8 +95,9 @@
         <InArgument x:TypeArguments="x:String">[Statusbar.split({" "},stringsplitoptions.none)(1)]</InArgument>
       </Assign.Value>
     </Assign>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="568.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Statusbar]" />
     <ui:SetAsset TimeoutMS="{x:Null}" AssetName="BDG_p05_documentNumber" DisplayName="Set Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="568.8,22.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[documentNumber]" />
-    <If Condition="[Statusbar.Split({&quot; &quot;}, stringsplitoptions.none)(4)=&quot;saved&quot;]" sap:VirtualizedContainerService.HintSize="568.8,209.6" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Statusbar.Split({&quot; &quot;}, stringsplitoptions.none)(0)=&quot;Document&quot;]" sap:VirtualizedContainerService.HintSize="568.8,209.6" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
           <Assign.To>
