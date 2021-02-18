@@ -95,7 +95,9 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke navigateFromHome workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="reusables\navigateFromHome.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_transactionCode">VA41</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_transactionCode">
+          <Literal x:TypeArguments="x:String">VA41</Literal>
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke VA41_CreateQuantityContractIntialScreen workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="reusables\process_03\VA41_CreateQuantityContractIntialScreen.xaml">
@@ -120,9 +122,7 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke VA41_scrapeQuantityContract workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="reusables\process_03\VA41_scrapeQuantityContract.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_orchestratorFolderPath">
-          <Literal x:TypeArguments="x:String">Default</Literal>
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_orchestratorFolderPath">Default</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

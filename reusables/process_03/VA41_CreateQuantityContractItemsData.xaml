@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,1880</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824,2234.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VA41_CreateQuantityContractItemsData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -53,11 +53,12 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="VA41_CreateQuantityContractItemsData" sap:VirtualizedContainerService.HintSize="484.8,1715.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="VA41_CreateQuantityContractItemsData" sap:VirtualizedContainerService.HintSize="484.8,2069.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="amount" />
       <Variable x:TypeArguments="x:String" Name="conditionType" />
       <Variable x:TypeArguments="x:String" Name="currency" />
+      <Variable x:TypeArguments="x:String" Name="unitOfMeasure" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -77,6 +78,11 @@
     <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_currency" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="443.2,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[currency]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_p03_unitOfMeasure" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="443.2,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[unitOfMeasure]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
     <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'CTextField  Material'" sap:VirtualizedContainerService.HintSize="443.2,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
@@ -149,7 +155,19 @@
     </ui:TypeInto>
     <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  Crcy'" sap:VirtualizedContainerService.HintSize="443.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[currency]">
       <ui:TypeInto.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="82f9d4e2-3351-4284-b87a-5be992d63d9f" InformativeScreenshot="b8f2f5c88e92fd76ab0135230fc81450" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Item Data' /&gt;&#xD;&#xA;&lt;sap colTooltip='Condition Unit' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='15' tableCol='4' /&gt;&#xD;&#xA;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="82f9d4e2-3351-4284-b87a-5be992d63d9f" InformativeScreenshot="b8f2f5c88e92fd76ab0135230fc81450" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Item Data' /&gt;&#xA;&lt;sap colTooltip='Condition Unit' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='15' tableCol='4' /&gt;&#xA;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  UoM'" sap:VirtualizedContainerService.HintSize="443.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[unitOfMeasure]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2b9a17ba-68a1-40a6-9ed6-1eb8055b658f" InformativeScreenshot="462ad61d9ec2305dc706002dec2aefd4" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Quantity Contract: Item Data' /&gt;&lt;sap colTooltip='Condition Unit' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='15' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

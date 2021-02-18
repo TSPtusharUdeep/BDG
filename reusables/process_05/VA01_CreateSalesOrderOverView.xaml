@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,3618.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824,3564</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VA41_CreateQuantityContractOverView_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -62,7 +62,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="VA41_CreateQuantityContractOverView" sap:VirtualizedContainerService.HintSize="561.6,3453.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="VA41_CreateQuantityContractOverView" sap:VirtualizedContainerService.HintSize="561.6,3399.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sold_to_Party" />
       <Variable x:TypeArguments="x:String" Name="ship_to_Party" />
@@ -72,6 +72,7 @@
       <Variable x:TypeArguments="x:String" Name="material" />
       <Variable x:TypeArguments="x:String" Name="targetQuantity" />
       <Variable x:TypeArguments="x:String" Name="plant" />
+      <Variable x:TypeArguments="x:String" Name="currentdate" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -122,6 +123,11 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BDG_currentDate" DisplayName="Get Asset" FolderPath="[in_orchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="520,139.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_8">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[currentdate]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,310.4" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484.8,232" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -135,18 +141,6 @@
               <OutArgument x:TypeArguments="x:String">[plant]</OutArgument>
             </ui:GetRobotAsset.Value>
           </ui:GetRobotAsset>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,193.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
@@ -198,7 +192,7 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField Customer'" sap:VirtualizedContainerService.HintSize="435.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[System.DateTime.Now.Date.ToString(&quot;MM/dd/yyyy&quot;)]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField Customer'" sap:VirtualizedContainerService.HintSize="435.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[currentdate]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f4dc9ad9-cb63-4edd-91e8-01a280cc410c" InformativeScreenshot="df89be1aed39372c85b01a16fa3715b8" Selector="&lt;sap id='usr/subSUBSCREEN_HEADER:SAPMV45A:4021/ctxtVBKD-BSTDK' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -212,7 +206,7 @@
             </ui:TypeInto>
             <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  Material'" sap:VirtualizedContainerService.HintSize="435.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="[material]">
               <ui:TypeInto.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ba6d6c73-7175-4bcd-ad3b-2edac491f97d" InformativeScreenshot="6b48fefd3a0a8aaa671c87480751756e" Selector="&lt;sap colTooltip='Material' id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4400/subSUBSCREEN_TC:SAPMV45A:4900/tblSAPMV45ATCTRL_U_ERF_AUFTRAG' tableRow='0' tableCol='1' /&gt;&#xD;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ba6d6c73-7175-4bcd-ad3b-2edac491f97d" InformativeScreenshot="6b48fefd3a0a8aaa671c87480751756e" Selector="&lt;sap colTooltip='Material' id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4400/subSUBSCREEN_TC:SAPMV45A:4900/tblSAPMV45ATCTRL_U_ERF_AUFTRAG' tableRow='0' tableCol='1' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -224,7 +218,7 @@
             </ui:TypeInto>
             <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TextField Target'" sap:VirtualizedContainerService.HintSize="435.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_8" Text="[targetQuantity]">
               <ui:TypeInto.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ca3dfee4-8f8d-4731-8ed0-659dc04c57a5" InformativeScreenshot="36e63117fb8bd3a7b9264f2cdeb0b633" Selector="&lt;sap colTooltip='Order Quantity' id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4400/subSUBSCREEN_TC:SAPMV45A:4900/tblSAPMV45ATCTRL_U_ERF_AUFTRAG' tableRow='0' tableCol='2' /&gt;&#xD;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ca3dfee4-8f8d-4731-8ed0-659dc04c57a5" InformativeScreenshot="36e63117fb8bd3a7b9264f2cdeb0b633" Selector="&lt;sap colTooltip='Order Quantity' id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4400/subSUBSCREEN_TC:SAPMV45A:4900/tblSAPMV45ATCTRL_U_ERF_AUFTRAG' tableRow='0' tableCol='2' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -293,7 +287,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb7517dc-6ca9-4545-b832-8a8fc303e9ba" InformativeScreenshot="64087c4eac133d61f7f7884196d7eba7" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='SAP Credit Management: Messages from Credit Check' idx='*' /&gt;&#xD;&#xA;&lt;sap id='tbar[0]/btn[0]' /&gt;&#xD;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb7517dc-6ca9-4545-b832-8a8fc303e9ba" InformativeScreenshot="64087c4eac133d61f7f7884196d7eba7" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='SAP Credit Management: Messages from Credit Check' idx='*' /&gt;&#xA;&lt;sap id='tbar[0]/btn[0]' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
