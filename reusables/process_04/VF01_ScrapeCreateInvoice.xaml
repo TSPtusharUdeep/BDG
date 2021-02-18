@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>863.2,1348</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>873.6,1348</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VF01_ScrapeCreateInvoice_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
@@ -119,7 +119,7 @@
         </Assign>
       </If.Else>
     </If>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="568.8,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[out_boolVal]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="568.8,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[.tos]" />
     <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2500" DisplayName="Type Into 'OkCodeField  okcd'" sap:VirtualizedContainerService.HintSize="568.8,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[&quot;/i&quot;+ &quot;[k(enter)]&quot;]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9f148815-cbe4-4b1f-a342-7f43b3370c08" InformativeScreenshot="494838cb39d3e9f1b16b3367f1aea56d" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Billing Document' /&gt;&lt;sap id='tbar[0]/okcd' /&gt;">
