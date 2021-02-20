@@ -91,6 +91,11 @@
         "editingStatus": "InProgress",
         "testCaseId": "c9a03ebf-ee7f-4f3e-9ba4-dab36973819b",
         "fileName": "testCases\\process_13_zxsStoProcess.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "32587ae0-7470-453f-8f7e-d04372c880ec",
+        "fileName": "testCases\\process_15_createZGIS_STO_GoingFromPlant.xaml"
       }
     ],
     "modernBehavior": false
