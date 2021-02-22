@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,4578.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>832,4445.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VA41_CreateQuantityContractOverView_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -66,7 +66,7 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="VA41_CreateQuantityContractOverView" sap:VirtualizedContainerService.HintSize="677.6,4413.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="VA41_CreateQuantityContractOverView" sap:VirtualizedContainerService.HintSize="677.6,4280.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sold_to_Party" />
       <Variable x:TypeArguments="x:String" Name="ship_to_Party" />
@@ -153,13 +153,13 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Create'" sap:VirtualizedContainerService.HintSize="636,2895.2" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="721a076746db4aae4567f7be626a075e" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Overview' /&gt;">
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Create'" sap:VirtualizedContainerService.HintSize="636,2762.4" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="721a076746db4aae4567f7be626a075e" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Overview' /&gt;">
       <ui:WindowScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602.4,2748" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602.4,2615.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="futureDate" />
             </Sequence.Variables>
@@ -287,15 +287,15 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[futureDate]" sap:VirtualizedContainerService.HintSize="560.8,585.6" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[futureDate]" sap:VirtualizedContainerService.HintSize="560.8,452.8" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="416.8,436" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence sap:VirtualizedContainerService.HintSize="416.8,303.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,343.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,210.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -313,7 +313,6 @@
                         </ui:Target>
                       </ui:SendHotkey.Target>
                     </ui:SendHotkey>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;The customer reference date lies in the future&quot;]" />
                   </Sequence>
                 </Sequence>
               </If.Then>
